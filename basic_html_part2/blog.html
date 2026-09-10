@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+</head>
+<body>
+    <main>  
+        <section>  
+            <header>  
+            <h1>Welcome to My Blog</h1>  
+                <nav> 
+                    <!--we use the list-style-type:none if we dont want to
+                    show any bullets, etc so it looks like a natural link--> 
+                    <ul style="list-style-type: none;">  
+                        <li><a href="#home">Home</a></li>  
+                        <li><a href="#about">About</a></li>  
+                    </ul>  
+                </nav>  
+            </header>  
+
+            <article>  
+                <h2>First Post</h2>  
+                <p>This is the introduction paragraph.</p>  
+                <p>More details are explained in the following sections.</p>  
+            </article>
+            
+            <article>
+                <h2>My Second Post</h2>
+                <p>I have learned so much from my first post</p>
+                <b>Here are what I learned:</b>
+                <!--we can change how we show our order list like
+                1,2,3,4
+                i,ii,ii,
+                a,b,c,d,
+                A,B,C,D
+                We use the style for that
+                -->
+                <ol style="list-style-type:upper-roman">
+                    <li>Learning new things take time</li>
+                    <li>Practice make perfect</li>
+                </ol>
+            </article>
+
+            <article>
+                <h3>I am taking 3 classes this semester!</h3>
+                <dl>
+                    <dt>NACA-172</dt>
+                    <dd>
+                        This course introduces students to web page and small-scale website development. Through hands-on laboratory experiences, students will learn the fundamental concepts needed to construct web pages that follow appropriate coding standards as well as basic design principles to present content in an attractive and organized manner. Topics include HTML, CSS, graphical elements, website publishing, and transfer protocols.
+                    </dd>
+
+                    <dt>NACA-121</dt>
+                    <dd>
+                        This course is a continuation of NACA-120 that delves further into problem solving and software development with a focus on object-oriented design and development. Students will continue to learn basic software design, incremental development, testing, and verification. Students will also learn key topics including classes, objects, encapsulation, inheritance, interfaces, software design comprised of multiple classes, UML (Unified Modeling Language) as a design/documentation tool, data structures, exception/error handling, and file I/O.
+                    </dd>
+                </dl>
+            </article>
+
+            <aside>  
+                <p>Sponsored content or related links go here.</p>  
+            </aside>  
+        </section>  
+
+        <footer>  
+            <p>&copy; 2026 My Blog</p>  
+        </footer>  
+    </main>
+
+</body>
+</html>
