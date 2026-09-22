@@ -1,0 +1,20 @@
+h3 {
+    color:blue;
+    font-size:1.9em !important
+}
+
+body{
+    background:black;
+    color: white;
+}
+
+header{
+    background:grey;
+    border-radius:5px;
+    text-align: center;
+    text-transform:uppercase;
+}
+
+p{
+    float:left;
+}
