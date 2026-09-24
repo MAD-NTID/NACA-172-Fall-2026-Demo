@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating layout</title>
+
+    <style>
+        ol{
+            display:block;
+        }
+
+        ol li{
+            display: inline;
+            margin-right:5px;
+            background:blue;
+            border-radius:1px;
+            border-width:5px;
+            border-style: solid;
+        }
+
+        ol li a{
+            color:white;
+        }
+        #content{
+            float:left;
+            width:80%;
+            height:300px;
+        }
+        #sidebar{
+            height:300px;
+        }
+
+        #footer{
+            clear:both; /*remove the float effect from the sidebar so it doesnt affect the footer*/
+        }
+    </style>
+</head>
+<body>
+    <header style="text-align: center; background: brown;">
+        <h1>
+            Header
+        </h1>
+    </header>
+
+    <nav>
+        <ol>
+            <li>
+                <a href="#">Link 1</a>
+            </li>
+
+            <li>
+                <a href="#">Link 2</a>
+            </li>
+
+            <li>
+                <a href="#">Link 3</a>
+            </li>
+        </ol>
+    </nav>
+
+    <main>
+        <section id="content" style="background-color: aqua;">
+            <h2>
+                Content
+            </h2>
+        </section>
+
+        <aside id="sidebar" style="background-color: red;">
+            <h2>
+                Sidebar
+            </h2>
+        </aside>
+    </main>
+
+    <footer style="background-color: blueviolet;">
+        <h2>
+            Footer
+        </h2>
+    </footer>
+</body>
+</html>
