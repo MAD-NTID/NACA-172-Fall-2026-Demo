@@ -1,0 +1,17 @@
+main{
+    display:flex;
+    /*the direction is row by default.*/
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: start;
+    align-items: stretch;
+    gap: 50px;
+}
+
+div{
+    border-radius:5px;
+    border-style: solid;
+    border-color: aqua;
+    /* margin:5px; */
+    padding: 5px;
+}
