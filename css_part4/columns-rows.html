@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Col/Rows</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 200px 1fr 200px;  /* 3 columns */
+            grid-template-rows: 100px auto 50px;     /* 3 rows */
+            gap: 10px;
+        }
+
+        header { grid-column: 1 / 4; }  /* spans all 3 columns */
+        nav    { grid-column: 1 / 2; }
+        main   { grid-column: 2 / 3; }
+        aside  { grid-column: 3 / 4; }
+        footer { grid-column: 1 / 4; }
+
+        body * {
+            border: 1px dashed black;
+        }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <nav>Nav</nav>
+    <main>Main Content</main>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+</body>
+</html>

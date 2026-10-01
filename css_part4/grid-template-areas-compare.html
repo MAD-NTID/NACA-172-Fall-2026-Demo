@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template</title>
+    <style>
+        /* body {
+            display: grid;
+
+            grid-template-columns: 10% 3fr 15%;
+            grid-template-rows: 1fr 3fr 1fr;
+            grid-template-areas:
+                "header header header"
+                "nav    main   aside"
+                "footer footer footer";
+        } */
+
+        body {
+            display: grid;
+
+            grid-template:
+                "header header header"  1fr  /* define row height*/
+                "nav main aside"        3fr
+                "footer footer footer"  1fr
+                / 10% 3fr 15%               /* define column widths */
+        }
+
+        header { grid-area: header; background: lightcoral; }
+        nav    { grid-area: nav;    background: lightblue; }
+        main   { grid-area: main;   background: lightgreen; }
+        aside  { grid-area: aside;  background: khaki; }
+        footer { grid-area: footer; background: plum; }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <nav>Nav</nav>
+    <main>Main</main>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+</body>
+</html>

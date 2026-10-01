@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gridlines</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 80px auto 60px;
+        }
+
+        header {
+            grid-column: 1 / 4;  /* span all 3 columns */
+            grid-row: 1 / 2;     /* only first row */
+            background: lightcoral;
+        }
+        
+        nav {
+            grid-column: 1 / 2;  /* first column */
+            grid-row: 2 / 3;     /* second row */
+            background: lightblue;
+        }
+        
+        main {
+            grid-column: 2 / 3;  /* middle column */
+            grid-row: 2 / 3;     /* second row */
+            background: lightgreen;
+        }
+        
+        aside {
+            grid-column: 3 / 4;  /* third column */
+            grid-row: 2 / 3;     /* second row */
+            background: khaki;
+        }
+        
+        footer {
+            grid-column: 1 / 4;  /* span all 3 columns */
+            grid-row: 3 / 4;     /* last row */
+            background: plum;
+        }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <nav>Nav</nav>
+    <main>Main</main>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+</body>
+</html>
