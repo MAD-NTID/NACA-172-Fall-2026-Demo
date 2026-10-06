@@ -1,0 +1,153 @@
+
+/* Try changing these! */
+
+.container{
+    display: flex;
+    flex-direction:column
+}
+
+@media (min-width:600px) {
+    .container{
+        display:flex;
+        flex-direction: row;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eee;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+}
+
+.header {
+    background: tomato;
+    padding: 30px;
+    color: white;
+    font-size: 40px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    flex: 1;
+    background: gold;
+    padding: 30px;
+    min-height: 150px;
+}
+
+.sidebar {
+    background: lightblue;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.footer {
+    background: #222;
+    color: white;
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* @media(width:300px){
+    body{
+        background:black;
+        color:white; 
+    }
+} */
+
+/* from width 300 and below but not greater than 300px*/
+@media(max-width:300px)
+{
+    body{
+        background:red;
+        color:white; 
+    }
+    .container{
+        background:pink;
+    }
+}
+
+/*start from width 301px and forever*/
+@media(min-width:301px)
+{
+    body{
+        background:purple;
+        color:white; 
+    }
+    .container{
+        background:yellow;
+    }
+}
+
+/* both must be true for the css to take effect*/
+@media(min-width:301px) and  (min-height:400px)
+{
+    body{
+        background:blue;
+        color:white; 
+    }
+    .container{
+        background:red;
+    }
+}
+
+/* do not print sidebar when the print is selected*/
+/* if there are certain elements you do not want to print when the user attempt to print, 
+you can use @media print to do whatever you need to do*/
+@media print{
+    .sidebar{
+        display: none;
+    }
+    /* colors may not always be enforced*/
+    /* body{
+        background:black;
+        color:white;
+    } */
+
+}
+
+    /* =========================
+    PLAY WITH THESE
+    ========================= */
+
+/*@media (max-width: 900px) {
+    .container {
+    width: 700px;
+    }
+
+    .header {
+    font-size: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+    width: auto;
+    margin: 10px;
+    padding: 15px;
+    }
+
+    .header {
+    font-size: 22px;
+    }
+
+    .cards {
+    flex-direction: column;
+    }
+
+    .card {
+    min-height: 80px;
+    }
+} */
