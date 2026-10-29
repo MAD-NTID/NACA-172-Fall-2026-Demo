@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="assets/css/mystyle.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <h1>Hello</h1>
+    <h1>Hello 2</h1>
+
+    <h2 id="h2Hello">Hello 5</h2>
+
+    <button class="btn-primary submit">Submit</button>
+    
+    <script>
+        function greetPerson(name)
+        {
+            alert("Hello " + name);
+        }
+
+        function plusOne(current_value)
+        {
+            alert(current_value + " plus 1 is :" + (current_value + 1) );
+        }
+
+        function addTwoNumbers(numberOne, numberTwo)
+        {
+            return numberOne + numberTwo;
+        }
+
+        // //we are missing passing the parameter
+        // plusOne(); //incorret
+        // plusOne(20); // correct
+
+        // //name has not been defined at all
+        // alert("Hello "+ name);
+
+        // greetPerson("Abhik");
+        // greetPerson("Dalton");
+        // greetPerson("Adam");
+
+        // let num1 = 5;
+        // let num2 =6;
+        // let result = addTwoNumbers(num1, num2);
+        // //using concatenation approach
+        // alert("The result of " + num1 + " + " + num2 + " = " + result);
+
+        // //using the backtick so we can use the variables directly in the string
+        // alert(`The result of ${num1} + ${num2} = ${result}`);
+
+        console.error("An error occurred... System crashing!!!!");
+        console.log("console.log is just information!");
+
+        function aFunctionWithBug()
+        {
+            let a = 5;
+            let c = "20";
+
+            let result = a + c;
+
+            console.log(result);
+        }
+
+        aFunctionWithBug();
+
+        const h1 = document.getElementsByTagName("h1");
+        // alert(h1.length);
+        // alert(h1[0].textContent);
+        // alert(h1[0].innerHTML);
+
+        const h2 = h1[0].nextElementSibling;
+        console.log(h2.innerHTML);
+
+        //we can also use class name or get by id
+        const h2Hello = document.getElementById("h2Hello");
+        console.log(h2Hello.innerHTML);
+
+        //we can also change the dom 
+        h2Hello.innerHTML = "I changed this through the dom!!!";
+        h2Hello.classList.add("aNewClassAdded");
+
+        const submitButton = document.querySelector('.submit');
+        
+        //listen for a click
+        submitButton.addEventListener('click', (event)=>{
+            //prevent the button from moving
+            event.preventDefault();
+
+            alert("you clicked on submit button");
+            
+            //the button already click so we add disabled property
+            submitButton.setAttribute('disabled', '');
+
+            //switch the classes
+            submitButton.classList.add("btn-disabled");
+            submitButton.classList.remove("btn-primary");
+        });
+
+
+    </script>
+</body>
+</html>

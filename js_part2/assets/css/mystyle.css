@@ -1,0 +1,9 @@
+.btn-primary{
+    color:white;
+    background:blue;
+}
+
+.btn-disabled{
+    color:white;
+    background:grey;
+}
