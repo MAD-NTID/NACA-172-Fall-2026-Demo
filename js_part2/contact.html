@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="assets/css/mystyle.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <h1>Hello I am contact</h1>
+    <nav>
+        <a href="index.html" class="tab">Home</a>
+        <a href="about.html" class="tab">About</a>
+        <a href="contact.html" class="tab">Contact</a>
+    </nav>
+
+    <script>
+        //get the url of the current page
+        //break up the page by /
+        //then pick the last one
+        const page = window.location.pathname.split("/").pop();
+        console.log(page);
+
+        //get based on the current html tab and page
+        const activeTab = document.querySelector(`a[href="${page}"]`);
+
+        //console.log(activeTab);
+
+        //ensure that the page exist
+        if(activeTab!==undefined){
+            //now we can add the active class on it
+            activeTab.classList.add('active');
+        }
+        
+    </script>
+</body>
+</html>

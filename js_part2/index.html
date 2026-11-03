@@ -14,7 +14,67 @@
 
     <h2 id="h2Hello">Hello 5</h2>
 
-    <button class="btn-primary submit">Submit</button>
+    <!--Sample nav-->
+    <nav>
+        <a href="#" class="tab">Home</a>
+        <a href="#section10">Jump to section 10</a>
+        <a href="#" class="tab">About</a>
+        <a href="#" class="tab">Contact</a>
+    </nav>
+
+
+        <section>
+        <h2>Section 1: Introduction</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </section>
+
+    <section>
+        <h2>Section 2: About Us</h2>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </section>
+
+    <section>
+        <h2>Section 3: Our Services</h2>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </section>
+
+    <section>
+        <h2>Section 4: Our Mission</h2>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+
+    <section>
+        <h2>Section 5: Our Vision</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+    </section>
+
+    <section>
+        <h2>Section 6: Our Team</h2>
+        <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper.</p>
+    </section>
+
+    <section>
+        <h2>Section 7: Our Projects</h2>
+        <p>Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+    </section>
+
+    <section>
+        <h2>Section 8: Our Experience</h2>
+        <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.</p>
+    </section>
+
+    <section>
+        <h2>Section 9: Testimonials</h2>
+        <p>Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc.</p>
+    </section>
+
+    <section id="section10">
+        <h2>Section 10: Conclusion</h2>
+        <p>Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus.</p>
+    </section>
+
+    <!--
+    <button class="btn-primary submit">Submit</button>-->
     
     <script>
         function greetPerson(name)
@@ -83,22 +143,56 @@
         h2Hello.innerHTML = "I changed this through the dom!!!";
         h2Hello.classList.add("aNewClassAdded");
 
-        const submitButton = document.querySelector('.submit');
+        // const submitButton = document.querySelector('.submit');
         
-        //listen for a click
-        submitButton.addEventListener('click', (event)=>{
-            //prevent the button from moving
-            event.preventDefault();
+        // //listen for a click
+        // submitButton.addEventListener('click', (event)=>{
+        //     //prevent the button from moving
+        //     event.preventDefault();
 
-            alert("you clicked on submit button");
+        //     alert("you clicked on submit button");
             
-            //the button already click so we add disabled property
-            submitButton.setAttribute('disabled', '');
+        //     //the button already click so we add disabled property
+        //     submitButton.setAttribute('disabled', '');
 
-            //switch the classes
-            submitButton.classList.add("btn-disabled");
-            submitButton.classList.remove("btn-primary");
-        });
+        //     //switch the classes
+        //     submitButton.classList.add("btn-disabled");
+        //     submitButton.classList.remove("btn-primary");
+        // });
+
+        function addListenerTab(tab)
+        {
+            tab.addEventListener('click', (event)=>{
+                //find the current active tab
+                const activeTab = document.getElementsByClassName('tab active');
+                //alert(activeTab.length); - we saw here that if the length is 0 then we have no previous active
+                //so we only modify if we have one previous active
+                if(activeTab.length == 1){
+                    activeTab[0].classList.remove('active');
+                }
+                tab.classList.add('active');
+            })
+        }
+
+        function navigationTabActive()
+        {
+            //find the tab class
+            const tabs = document.getElementsByClassName('tab');
+            
+            //register all 3 tabs as clickable
+            for(let i = 0; i < tabs.length; i++){
+                
+                //a specific tab at specific index
+                const tab = tabs[i];
+                addListenerTab(tab)
+            }
+        }
+
+        //call the navigationActive
+        navigationTabActive();
+
+
+
 
 
     </script>

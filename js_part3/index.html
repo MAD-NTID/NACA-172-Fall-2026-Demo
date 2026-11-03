@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum Flex Layout</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #333;
+            padding: 30px;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            background: #222;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            flex: 1 1 250px;
+            max-width: 350px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .card h2 {
+            color: #2563eb;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: auto;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #222;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Lorem Ipsum Website</h1>
+        <p>A simple responsive Flexbox layout</p>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+            <h2>Section 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+            <button onclick="sectionOneButton()" onmouseover="sectionOneMouseOver()" onmouseout="sectionOneMouseOut()">Learn More</button>
+        </section>
+
+        <section class="card">
+            <h2>Section 2</h2>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+            <button>Explore</button>
+        </section>
+
+        <section class="card">
+            <h2>Section 3</h2>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+            <button id="section3">Read More</button>
+        </section>
+
+        <section class="card">
+            <h2>Section 4</h2>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+            <button>Discover</button>
+        </section>
+
+        <section class="card">
+            <h2>Section 5</h2>
+            <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam.</p>
+            <button>View More</button>
+        </section>
+
+        <section class="card">
+            <h2>Section 6</h2>
+            <p>Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Cras mattis consectetur purus.</p>
+            <button>Get Started</button>
+        </section>
+
+        <section class="card">
+            <h2>Section 7</h2>
+            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus.</p>
+            <button>Read More</button>
+        </section>
+
+        <section class="card">
+            <h2>Section 8</h2>
+            <p>Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <button>Explore</button>
+        </section>
+
+        <section class="card">
+            <h2>Section 9</h2>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est.</p>
+            <button>Discover</button>
+        </section>
+
+        <section class="card">
+            <h2>Section 10</h2>
+            <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod.</p>
+            <button>Finish</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lorem Ipsum Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+
+        function sectionOneButton()
+        {
+            alert("Section 1 was clicked");
+        }
+
+        function sectionOneMouseOver()
+        {
+            alert("How dare you hover me!!!");
+        }
+
+        function sectionOneMouseOut()
+        {
+            alert("NOOOOO DONT LEAVE ME!!!!");
+            alert("I PROMISE I WILL BE SUPER GOOD.... CROSS MY HEART!!!!!");
+        }
+
+
+        //for when the full page is loaded
+        window.onload = (event) => {
+            alert("page is fully loaded");
+        };
+
+        document.onload = (event)=>{
+            alert("The document has been loaded");
+        };
+
+        const section3 = document.getElementById('section3');
+
+        //listen for click on the button
+        section3.addEventListener('click', (event)=>{
+
+            //get the color 
+            let currentColor = section3.style.color;
+
+            //if there is none or the color is white we change to black
+            if(currentColor==='' || currentColor==='white'){
+                section3.style.color = "black";
+                section3.style.backgroundColor = "brown";
+                section3.style.fontSize = "30px";
+            } else {//otherwise we change to white
+                section3.style.color = "white";
+                section3.style.backgroundColor = "blue";
+                section3.style.fontSize = "14px";
+            }
+        })
+    </script>
+
+</body>
+</html>
